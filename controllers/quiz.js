@@ -104,7 +104,7 @@ exports.check = (req, res, next) => {
 	
 	const {quiz, query} = req;
 	const answer = query.answer || "";
-	const result = answer.toLowerCase().trim() === quiz.answer.toLowercase().trim();
+	const result = answer.toLowerCase().trim() === quiz.answer.toLowerCase().trim();
 	res.render('quizzes/play', {
 		quiz,
 		result,
