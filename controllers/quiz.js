@@ -32,6 +32,16 @@ exports.show = (req, res, next) => {
 	res.render('quizzes/show', {quiz});
 };
 
+exports.new = (req, res, next) => {
+
+    const quiz = {
+        question: "",
+        answer:""
+    };
+
+    res.render('quizzes/new', {quiz});
+};
+
 // GET /quizzes/new
 exports.create = (req, res, next) => {
 	const {question, answer} = req.body;
